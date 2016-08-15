@@ -9,10 +9,11 @@
 </head>
 <body>
 
-<canvas id="canvas" width="500" height="800"></canvas>
 <div class="container">
 	<section id="Introduction">
-		
+		<p id="typeString"></p>
+
+		<span id="startString" style="opacity: 0;">準備好的話，請按下箭頭</span>
 	</section>
 	<section id="">
 		
@@ -25,4 +26,30 @@
 	<section></section>
 </div>
 </body>
+
+<script>
+	$(function(){
+        $('#typeString').typed({
+            strings: ["親愛的雅婷", "準備好了嗎？" ,"要  開  始  囉  ！"],
+            stringsElement: null,
+            typeSpeed: 200,
+            startDelay: 500,
+            backSpeed: 200,
+            shuffle: false,
+            backDelay: 500,
+            loop: false,
+            loopCount: false,
+            showCursor: false,
+            attr: null,
+            contentType: 'text',
+            callback: function() {
+            	$('#startString').animate({opacity: 1}, 2000);
+            },
+            preStringTyped: function() {},
+            onStringTyped: function() {},
+            resetCallback: function() {}
+        });
+    });
+
+</script>
 </html>
