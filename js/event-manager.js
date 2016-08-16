@@ -119,7 +119,7 @@ $(document).on('click', 'button', buttonHandler);
 
 
 $('#yesSelect').on('click', function(e) {
-  $('#ConfessionGo2').animate(hidden).css(z0);
+  $('#ConfessionGo2').animate(hidden).css(z0).hide();
   $('#End').animate(show).css(z1);
   $('#avatar').hide();
 });
