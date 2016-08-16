@@ -424,7 +424,7 @@ body, html {
 
 .player {
   position: absolute;
-  bottom: 10%;
+  bottom: 15%;
   width: 100vw; }
 
 .heart-header {
