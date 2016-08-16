@@ -383,15 +383,42 @@ body, html {
 
 .container > section {
   position: absolute;
+  z-index: -1;
   top: 100px;
   left: 0;
   width: 100%;
   margin: 0 auto;
   text-align: center;
-  opacity: 1; }
-
-.container > section:not(:first-child) {
   opacity: 0; }
+
+.container > section:first-child {
+  opacity: 1;
+  z-index: 1; }
+
+.text-container {
+  min-height: 60%; }
+
+.image-container {
+  width: 100%; }
+  .image-container img {
+    max-width: 100%; }
+  .image-container img.current {
+    display: inline-block; }
+
+.image-displayer img {
+  max-width: 100%; }
+.image-displayer:first-child {
+  display: block; }
+
+.image-hidden {
+  opacity: 0; }
+
+#avatar {
+  display: block;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  box-shadow: 0 1px 5px rgba(50, 50, 50, 0.6); }
 
 .player {
   position: absolute;

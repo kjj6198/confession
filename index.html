@@ -15,20 +15,64 @@
 </header>
 <div class="container top-offset">
 	<section id="Introduction">
+      <div class="text-container">
 		<p id="typeString"></p>
-		<p id="startString" style="opacity: 0;">準備好的話，請按這裡</p>
-        <button data-action="nextPage" id="startButton" class="btn" style="opacity: 0;">請按我</button>
+		<p id="startString" style="opacity: 0;">準備好的話，請按這裡 </p>
+      </div>
+      <button data-action="nextPage" id="startButton" class="btn" style="opacity: 0;">請按我</button>
 	</section>
 
 	<section id="Confession1">
-		asdfasdf
+	  <div class="text-container">
+        <p id="ConfessionString"></p>
+
+        <button data-action="memoryPage" id="yesButton" class="btn" style="opacity: 0;">對！</button>
+      </div>
 	</section>
-	<section></section>
-	<section></section>
-	<section></section>
-	<section></section>
-	<section></section>
-	<section></section>
+	<section id="MemoryPage" style="opacity: 0;">
+      <div class="text-container">
+        <p id="ConfessionString2"></p>
+      </div>
+      <div id="ImageContainer" class="image-container">
+        <div class="image-displayer">
+          <h3 id="imageTitle">象山</h3>
+          <img id="image1" class="image-hidden" src="./img/elephant-mountain.jpg" alt="" />
+        </div>
+      </div>
+    </section>
+
+	<section id="ConfessionStart">
+      <div class="text-container">
+        <h2 id="moreString"></h2>
+        <div id="More" style="opacity: 0;">
+          <p>台東之旅</p>
+          <p>日本</p>
+          <p>跳傘</p>
+          <p style="letter-spacing: 1px;">跟那些還未知的旅程...</p>
+        </div>
+        <button data-action="touchingPage" id="touchPage" class="btn" style="opacity: 0;">還有什麼？</button>
+      </div>
+    </section>
+	
+    <section id="TouchingSection">
+      <div class="text-container">
+        <p id="ConfessionTalk"></p>
+        <img src="./img/message.png" style="max-width: 100%;">
+
+      </div>
+    </section>
+
+    <section id="ConfessionGo">
+      <img id="avatar" src="./img/message.png" alt="" style="text-align: center;">
+      <span>點擊頭像以查看訊息</span>
+    </section>
+
+    <section id="ConfessionGo2">
+      <h3 id="myConfession"></h3>
+      
+
+    </section>
+
 </div>
 <audio id="music" class="player" controls>
   <source src="./media/beautiful.mp3" />
