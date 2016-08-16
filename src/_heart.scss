@@ -1,0 +1,27 @@
+.heart-header {
+	height: 50px;
+	width: 100%;
+  padding-top: 15px;
+  padding-bottom: 15px;
+
+  border-bottom: 1px solid lighten(#343434, 20%);
+
+  text-align: center;
+}
+
+.heart { 
+	height: 50px;
+	vertical-align: middle;
+
+	animation-name: heart;
+	animation-iteration-count: infinite;
+	animation-duration: 1.5s;
+	animation-timing-function: ease-in-out;
+}
+
+
+@keyframes heart {
+  0%, 20% {
+  	transform: scale(1.1);
+  }
+}

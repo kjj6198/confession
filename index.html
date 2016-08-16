@@ -3,20 +3,25 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Confession</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+
+	<link rel="stylesheet" href="dist/index.css">
 	<script src="bower_components/jquery/dist/jquery.min.js"></script>
 	<script src="bower_components/typed.js/dist/typed.min.js"></script>
 </head>
 <body>
-
-<div class="container">
+<header class="heart-header">
+  <object class="heart" data="./img/heart.svg"></object>
+</header>
+<div class="container top-offset">
 	<section id="Introduction">
 		<p id="typeString"></p>
-
-		<span id="startString" style="opacity: 0;">準備好的話，請按下箭頭</span>
+		<p id="startString" style="opacity: 0;">準備好的話，請按這裡</p>
+        <button data-action="nextPage" id="startButton" class="btn" style="opacity: 0;">請按我</button>
 	</section>
-	<section id="">
-		
+
+	<section id="Confession1">
+		asdfasdf
 	</section>
 	<section></section>
 	<section></section>
@@ -25,18 +30,22 @@
 	<section></section>
 	<section></section>
 </div>
+<audio id="music" class="player" controls>
+  <source src="./media/beautiful.mp3" />
+</audio>
 </body>
 
 <script>
+  document.getElementById('music').load()
 	$(function(){
         $('#typeString').typed({
-            strings: ["親愛的雅婷", "準備好了嗎？" ,"要  開  始  囉  ！"],
+            strings: ["文案1", "文案2" ,"準備好了嗎？", "要  開  始  囉  ！"],
             stringsElement: null,
             typeSpeed: 200,
-            startDelay: 500,
+            startDelay: 400,
             backSpeed: 200,
             shuffle: false,
-            backDelay: 500,
+            backDelay: 400,
             loop: false,
             loopCount: false,
             showCursor: false,
@@ -44,6 +53,7 @@
             contentType: 'text',
             callback: function() {
             	$('#startString').animate({opacity: 1}, 2000);
+                $('#startButton').animate({opacity: 1}, 2000);
             },
             preStringTyped: function() {},
             onStringTyped: function() {},
@@ -52,4 +62,6 @@
     });
 
 </script>
+
+<script src="./js/event-manager.js"></script>
 </html>
