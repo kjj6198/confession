@@ -1,0 +1,18 @@
+#yesSelect {
+	position: relative;
+	display: inline-block;
+	&:before {
+		display: block;
+		content: '';
+		position: absolute;
+		width: 1.5em;
+		height: 1.5em;
+
+		top: calc(50% - 0.75em);
+		right: calc(100% + 15px);
+
+		border: 1px solid #aaa;
+		background-color: transparent;
+		
+	}
+}

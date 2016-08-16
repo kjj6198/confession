@@ -7,11 +7,11 @@ var z1 = { zIndex: 1 };
 var typeSetting = {
 	strings: [],
 	stringsElement: null,
-	typeSpeed: 0,
-	startDelay: 0,
-	backSpeed: 0,
+	typeSpeed: 300,
+	startDelay: 100,
+	backSpeed: 100,
 	shuffle: false,
-	backDelay: 0,
+	backDelay: 100,
 	loop: false,
 	loopCount: false,
 	showCursor: false,
@@ -52,7 +52,9 @@ handler.set('nextPage', function() {
 });
 
 handler.set('memoryPage', function() {
-	$('.heart').css('animation-duration', '.7s');
+	$('.heart').css({
+		WebkitAnimationDuration: '0.7s'
+	});
 	$('#MemoryPage').animate(show).css(z1);
   $('#Confession1').animate(hidden).css(z0);
 
@@ -64,7 +66,9 @@ handler.set('memoryPage', function() {
 });
 
 handler.set('touchingPage', function() {
-	$('.heart').css('animation-duration', '.5s');
+	$('.heart').css({
+		WebkitAnimationDuration: '0.5s'
+	});
   $('#ConfessionStart').animate(hidden).css(z0);
   $('#TouchingSection').animate(show).css(z1);
 
@@ -72,7 +76,9 @@ handler.set('touchingPage', function() {
     "糟糕，我的心越跳越快了。",
     "妳說",
     "有些時候做某件事情之所以會覺得開心並不是因為那件事而是因為那個人",
-    "謝謝妳這麼對我說"
+    "謝謝妳這麼對我說",
+    "我也是",
+    "那麼..."
    ];
 
    typeSetting.callback = function() {
@@ -83,15 +89,21 @@ handler.set('touchingPage', function() {
   $('#ConfessionTalk').typed(typeSetting);
 
   $('#avatar').on('click', function(e) {
-  	$('.heart').css('animation-duration', '.3s');
+  	$('.heart').css({
+			WebkitAnimationDuration: '0.3s'
+		});
   	$('#ConfessionGo').animate(hidden).css(z0);
     $('#ConfessionGo2').animate(show).css(z1);
 
     typeSetting.strings = [
       "那...",
       "跟 我 在 一 起 好 嗎 ？",
-      
     ];
+
+    typeSetting.callback = function() {
+    	$('#agree').animate(show);
+    };
+
 		$('#myConfession').typed(typeSetting);
   });
 
@@ -106,7 +118,10 @@ function buttonHandler(e) {
 $(document).on('click', 'button', buttonHandler);
 
 
-
+$('#yesSelect').on('click', function(e) {
+  $('#ConfessionGo2').animate(hidden).css(z0);
+  $('#End').animate(show).css(z1);
+});
 
 /* */
 

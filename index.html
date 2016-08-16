@@ -63,14 +63,27 @@
     </section>
 
     <section id="ConfessionGo">
-      <img id="avatar" src="./img/message.png" alt="" style="text-align: center;">
+      <img id="avatar" src="./img/yvette-avatar.png" alt="" style="text-align: center;">
       <span>點擊頭像以查看訊息</span>
     </section>
 
     <section id="ConfessionGo2">
       <h3 id="myConfession"></h3>
-      
+      <p style="opacity: 0" id="agree">是否答應愷開的浪漫告白？</p>
+      <div class="selectGroup">
+        <span id="yesSelect">當然好 >///< </span>
+      </div>
+    </section>
 
+    <section id="End">
+      <div class="heart-group">
+        <div class="heart-box">
+          <input id="toggle-heart" type="checkbox">
+          <label for="toggle-heart"><object data="./img/heart.svg" type=""></object></label>
+        </div>
+      </div>
+      <span>點點看愛心吧！</span>
+      <p>E N D</p>
     </section>
 
 </div>
@@ -83,7 +96,7 @@
   document.getElementById('music').load()
 	$(function(){
         $('#typeString').typed({
-            strings: ["文案1", "文案2" ,"準備好了嗎？", "要  開  始  囉  ！"],
+            strings: ["哈囉，親愛的雅婷", "那麼，" ,"準備好了嗎？", "要  開  始  囉  ！"],
             stringsElement: null,
             typeSpeed: 200,
             startDelay: 400,
