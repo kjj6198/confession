@@ -132,17 +132,17 @@ function startImageDisplay() {
 
   setTimeout(function(){
   	$('#image1').attr('src', './img/elephant-mountain-2.jpg').css(show);
-  }, 2500);
+  }, 3000);
 
   setTimeout(function() {
   	$('#imageTitle').text('饒河');
   	$('#image1').attr('src', './img/image2.jpg').css(show);
-  }, 5000);
+  }, 6000);
 
   setTimeout(function() {
   	$('#imageTitle').text('咖啡廳');
   	$('#image1').attr('src', './img/image3.jpg').css(show);
-  }, 7500);
+  }, 9000);
 
   setTimeout(function() {
   	$('#imageTitle').text('宜蘭之旅');
@@ -158,5 +158,5 @@ function startImageDisplay() {
 
 	  	$('#touchPage').animate(show);
   	}, 4000);
-  }, 10000);
+  }, 12000);
 }
